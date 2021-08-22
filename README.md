@@ -1,8 +1,9 @@
 # EDOPro-Custom-Cards
 My repository for custom cards I programmed for EDOPro
 
-Card images and effects belong to their original owners  
-If you do not want your cards on this database you can message me to have them removed
+Card images and effects belong to their original owners.  
+Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
+If you do not want your cards on this database you can message me to have them removed.
 
 Last Update 8/21/21
 
@@ -18,15 +19,15 @@ Nightmare Necroshade - Working
 Feral Wildheart - Need to finish trap immunity effect  
 Cutting Bladedge - Need to finish summoning condition and battle effect  
 Devoted Wroughtweiler - Not started  
-Skilled HERO Kid - Not Started, need to find work around for naming  
+Skilled HERO Kid - Not started, need to find work around for naming  
 Winged KuriHERO - Not started  
 HERO Evolution - Not started  
-Nova Wingman - Need to make atk gain effect not continuous  
+Nova Wingman - Working 
 Supernova Wingman - Not started  
 HERO Fusion Resurgence - Not started  
 Naval Mariner - Not started  
 Thrashing Wildheart - Not started  
-Storming Thundergiant - Need to figure out return to hand efffect, need to start negation effect  
+Storming Thunder Giant - Need to figure out return to hand efffect, need to start negation effect  
 Galactic Wizard - Not started  
 Illusionist Witch - Not started  
 Demon Dynamo - Not started  
