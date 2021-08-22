@@ -22,7 +22,7 @@ Devoted Wroughtweiler - Not started
 Skilled HERO Kid - Not started, need to find work around for naming  
 Winged KuriHERO - Not started  
 HERO Evolution - Not started  
-Nova Wingman - Working 
+Nova Wingman - Working  
 Supernova Wingman - Not started  
 HERO Fusion Resurgence - Not started  
 Naval Mariner - Not started  
