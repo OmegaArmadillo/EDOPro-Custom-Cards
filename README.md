@@ -32,4 +32,4 @@ Galactic Wizard - Not started
 Illusionist Witch - Not started  
 Demon Dynamo - Not started  
 Mystic HERO Ritual - Not started  
-Nebulonic Star - Need to make sure it cannot banish itseld from the hand to special summon itself  
+Nebulonic Star - Need to make sure it cannot banish itself from the hand to special summon itself  
