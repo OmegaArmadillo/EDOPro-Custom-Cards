@@ -12,9 +12,9 @@ Current Progress
 PrimeAceJohn</br>
 https://www.deviantart.com/primeacejohn</br>
 
-Gusting Avian - Working</br>  
+Gusting Avian - Working</br>
 Blazing Burstinatrix - Working</br> 
-Crashing Clayman - Working</br>  
+Crashing Clayman - Working</br>
 Hydraulic Bubbleman - Working</br> 
 Striking Sparkman - Need to finish atk gain effect</br> 
 Nightmare Necroshade - Working</br> 
