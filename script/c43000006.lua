@@ -3,7 +3,7 @@ local s,id=GetID()
 function s.initial_effect(c)
 	
 
-	--Activate(effect)
+	--Special summon when a trap is activated
 	local e1=Effect.CreateEffect(c)
 	e1:SetCategory(CATEGORY_SPECIAL_SUMMON)
 	e1:SetType(EFFECT_TYPE_QUICK_O)
@@ -16,14 +16,14 @@ function s.initial_effect(c)
 	c:RegisterEffect(e1)
 
 
-	--Unaffected by activated effect
-	local e2=Effect.CreateEffect(c)
+	--Unaffected by trap effects
+	 local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_FIELD)
 	e2:SetCode(EFFECT_IMMUNE_EFFECT)
-	e2:SetCondition(s.unacon)
-	e2:SetRange(LOCATION_SZONE)
+	e2:SetRange(LOCATION_MZONE)
 	e2:SetTargetRange(LOCATION_MZONE,0)
-	e2:SetValue(s.unaval)
+	e2:SetTarget(s.unatarget)
+	e2:SetValue(s.unafilter)
 	c:RegisterEffect(e2)
 
 	--attack boost
@@ -56,24 +56,13 @@ end
 
 
 --effect 2
-function s.unafilter(c)
-	return c:IsFaceup() and c:IsSetCard(0x8) and c:IsLevelBelow(7) and not c:IsType(TYPE_FUSION)
-end
-function s.unacon(e)
-	return Duel.IsExistingMatchingCard(s.unafilter,e:GetHandlerPlayer(),LOCATION_MZONE,0,3,nil)
-end
-function s.unaval(e,te)
-	local e1=Effect.CreateEffect(e:GetHandler())
-	e1:SetType(EFFECT_TYPE_FIELD)
-	e1:SetCode(EFFECT_IMMUNE_EFFECT)
-	e1:SetTargetRange(LOCATION_MZONE,0)
-	e1:SetTarget(aux.TargetBoolFunction(Card.IsSetCard,0x8))
-	e1:SetValue(s.efilter)
-	Duel.RegisterEffect(e1,tp)
+function s.unatarget(e,c)
+	return (c:GetOwner()==e:GetHandlerPlayer()) and c:IsPosition(POS_FACEUP) and c:IsSetCard(0x8) and c:IsLevelBelow(7) and not c:IsType(TYPE_FUSION)
 end
 
-function s.efilter(e,re)
-	return e:GetOwnerPlayer()~=re:GetOwnerPlayer() and re:IsActivated()
+
+function s.unafilter(e,te)
+	return te:IsActiveType(TYPE_TRAP) and te:GetOwner()~=e:GetOwner()
 end
 
 --effect 3
