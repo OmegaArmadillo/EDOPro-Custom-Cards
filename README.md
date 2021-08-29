@@ -16,14 +16,14 @@ Crashing Clayman - Working
 Hydraulic Bubbleman - Working  
 Striking Sparkman - Need to finish atk gain effect  
 Nightmare Necroshade - Working  
-Feral Wildheart - Need to finish trap immunity effect  
+Feral Wildheart - working 
 Cutting Bladedge - Need to finish summoning condition and battle effect  
 Devoted Wroughtweiler - Not started  
 Skilled HERO Kid - Not started, need to find work around for naming  
 Winged KuriHERO - Not started  
 HERO Evolution - Not started  
 Nova Wingman - Working  
-Supernova Wingman - Working 
+Supernova Wingman - Working  
 HERO Fusion Resurgence - Not started  
 Naval Mariner - Not started  
 Thrashing Wildheart - Not started  
