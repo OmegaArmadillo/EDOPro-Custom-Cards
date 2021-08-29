@@ -23,7 +23,7 @@ Cutting Bladedge - Need to finish summoning condition and battle effect</br>
 Devoted Wroughtweiler - Not started</br>
 Skilled HERO Kid - Not started, need to find work around for naming</br>
 Winged KuriHERO - Not started</br>
-HERO Evolution - Not started</br>  
+HERO Evolution - Not started</br>
 Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
 HERO Fusion Resurgence - Not started</br>
