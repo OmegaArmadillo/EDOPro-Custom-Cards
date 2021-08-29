@@ -9,27 +9,29 @@ Last Update 8/28/21
 
 Current Progress
 
-PrimeAceJohn  
-Gusting Avian - Working  
-Blazing Burstinatrix - Working  
-Crashing Clayman - Working  
-Hydraulic Bubbleman - Working  
-Striking Sparkman - Need to finish atk gain effect  
-Nightmare Necroshade - Working  
-Feral Wildheart - working 
-Cutting Bladedge - Need to finish summoning condition and battle effect  
-Devoted Wroughtweiler - Not started  
-Skilled HERO Kid - Not started, need to find work around for naming  
-Winged KuriHERO - Not started  
-HERO Evolution - Not started  
-Nova Wingman - Working  
-Supernova Wingman - Working  
-HERO Fusion Resurgence - Not started  
-Naval Mariner - Not started  
-Thrashing Wildheart - Not started  
-Storming Thunder Giant - Need to figure out return to hand effect and proper fusion materials  
-Galactic Wizard - Not started  
-Illusionist Witch - Not started  
-Demon Dynamo - Not started  
-Mystic HERO Ritual - Not started  
-Nebulonic Star - Need to make sure it cannot banish itself from the hand to special summon itself  
+PrimeAceJohn</br>
+https://www.deviantart.com/primeacejohn</br>
+
+Gusting Avian - Working</br>  
+Blazing Burstinatrix - Working</br> 
+Crashing Clayman - Working</br>  
+Hydraulic Bubbleman - Working</br> 
+Striking Sparkman - Need to finish atk gain effect</br> 
+Nightmare Necroshade - Working</br> 
+Feral Wildheart - working</br>
+Cutting Bladedge - Need to finish summoning condition and battle effect</br> 
+Devoted Wroughtweiler - Not started</br>
+Skilled HERO Kid - Not started, need to find work around for naming</br>
+Winged KuriHERO - Not started</br>
+HERO Evolution - Not started</br>  
+Nova Wingman - Working</br>
+Supernova Wingman - Working</br>
+HERO Fusion Resurgence - Not started</br>
+Naval Mariner - Not started</br>
+Thrashing Wildheart - Not started</br>
+Storming Thunder Giant - Need to figure out return to hand effect and proper fusion materials</br>
+Galactic Wizard - Not started</br>
+Illusionist Witch - Not started</br>
+Demon Dynamo - Not started</br>
+Mystic HERO Ritual - Not started</br>
+Nebulonic Star - Need to make sure it cannot banish itself from the hand to special summon itself</br>
