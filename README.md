@@ -5,7 +5,7 @@ Card images and effects belong to their original owners.
 Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
 If you do not want your cards on this database you can message me to have them removed.
 
-Last Update 8/21/21
+Last Update 8/28/21
 
 Current Progress
 
@@ -23,11 +23,11 @@ Skilled HERO Kid - Not started, need to find work around for naming
 Winged KuriHERO - Not started  
 HERO Evolution - Not started  
 Nova Wingman - Working  
-Supernova Wingman - Not started  
+Supernova Wingman - Working 
 HERO Fusion Resurgence - Not started  
 Naval Mariner - Not started  
 Thrashing Wildheart - Not started  
-Storming Thunder Giant - Need to figure out return to hand efffect, need to start negation effect  
+Storming Thunder Giant - Need to figure out return to hand effect and proper fusion materials  
 Galactic Wizard - Not started  
 Illusionist Witch - Not started  
 Demon Dynamo - Not started  
