@@ -1,7 +1,7 @@
 --Elemental HERO Crashing Clayman
 local s,id=GetID()
 function s.initial_effect(c)
-		--at limit
+	 --atk limit
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_FIELD)
 	e1:SetRange(LOCATION_MZONE)
@@ -29,7 +29,7 @@ function s.initial_effect(c)
 	e3:SetType(EFFECT_TYPE_QUICK_O)
 	e3:SetCode(EVENT_FREE_CHAIN)
 	e3:SetRange(LOCATION_MZONE)
-	e3:SetCountLimit(1,id)
+	e3:SetCountLimit(1,id+1)
 	e3:SetOperation(s.posop)
 	c:RegisterEffect(e3)
 end
