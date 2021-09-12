@@ -34,6 +34,9 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 
+
+s.listed_series={0x8}
+
 --effect 1
 function s.atlimit(e,c)
 	return c:IsFaceup() and c:IsSetCard(0x8) and c~=e:GetHandler()

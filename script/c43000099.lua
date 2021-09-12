@@ -30,8 +30,8 @@ function s.initial_effect(c)
 
 end
 
-s.listed_series={}
-s.listed_names={}
+s.listed_series={0x8,0x46,0xa5}
+
 function s.spfilter1(c)
 	return c:IsSetCard(0x8) and c:IsAbleToRemoveAsCost() and aux.SpElimFilter(c,true,true)
 end
@@ -116,6 +116,6 @@ function s.spop2(e,tp,eg,ep,ev,re,r,rp)
 
 	local g=Duel.SelectMatchingCard(tp,s.spfilter,tp,LOCATION_HAND+LOCATION_GRAVE,0,1,1,nil,e,tp)
 	local tc=g:GetFirst()
-	Duel.SpecialSummonStep(tc,0,tp,tp,false,false,POS_FACEUP)	  
+	Duel.SpecialSummonStep(tc,0,tp,tp,false,false,POS_FACEUP)	 
    Duel.SpecialSummonComplete()
 end

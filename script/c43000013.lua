@@ -42,6 +42,8 @@ function s.initial_effect(c)
 
 end
 
+s.listed_series={0x8,0x3008}
+
 --fusion material
 function s.ffilter(c,fc,sumtype,tp,sub,mg,sg)
 	return c:IsSetCard(0x8,fc,sumtype,tp) and c:GetAttribute(fc,sumtype,tp)~=0 and (not sg or not sg:IsExists(s.fusfilter,1,c,c:GetAttribute(fc,sumtype,tp),fc,sumtype,tp))

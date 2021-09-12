@@ -59,7 +59,7 @@ function s.fusfilter(c,attr,fc,sumtype,tp)
 end
 
 
-
+-- destroy effect
 function s.filter(c,atk)
 	return c:IsFaceup()
 end
@@ -83,7 +83,9 @@ function s.descost(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 
 
+s.listed_series={0x8}
 
+--fusion materials
 function s.thcon(e,tp,eg,ep,ev,re,r,rp)
 	return e:GetHandler():GetFlagEffect(id)~=0
 end

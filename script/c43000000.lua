@@ -26,8 +26,10 @@ function s.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 
+
+s.listed_series={0x8,0x46}
+
 --effect 1
-s.listed_series={0x8}
 function s.filter(c)
  --   return (c:IsSetCard(0x46) or c:IsSetCard(0x8)) and c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()
 return (c:IsCode(08949584,73239437,78387742,11881272,00191749,67951831,75141056,47596607) or c:IsCode(68786330,53466826) or c:IsCode(2159117,74095602,44676200,37412656,19024706,22020907,81167171) or c:IsCode(10489311,26647858,85854214,21924381,95920682,49551909,30426226,99590524)) or c:IsCode(27847700,24094653,74335036,07614732,48130397,76647978) and c:IsAbleToHand()

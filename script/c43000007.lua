@@ -28,6 +28,9 @@ function s.initial_effect(c)
 	c:RegisterEffect(e2)
 end
 
+s.listed_series={0x8}
+
+--effect 1
 function s.spfilter1(c)
 	return c:IsSetCard(0x8) and c:IsAbleToRemoveAsCost() and aux.SpElimFilter(c,true,true)
 end
@@ -66,15 +69,15 @@ function s.damtg(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 function s.damop(e,tp,eg,ep,ev,re,r,rp)
 	local tc=Duel.GetFirstTarget()
-	if tc and tc:IsRelateToEffect(e) then		
+	if tc and tc:IsRelateToEffect(e) then	   
 		  if Duel.Remove(tc,0,REASON_EFFECT) then
 				local p=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER)
 				local dam=tc:GetDefense()
 				local lev=tc:GetLevel()
 				if dam<0 then dam=0 end
-					if Duel.Damage(p,dam,REASON_EFFECT) and Duel.SelectYesNo(tp,aux.Stringid(id,0)) then
+					if Duel.Damage(p,dam,REASON_EFFECT) and Duel.IsExistingMatchingCard(s.schfilter,tp,LOCATION_DECK+LOCATION_GRAVE,0,1,nil) and Duel.SelectYesNo(tp,aux.Stringid(id,0)) then
 						Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_ATOHAND)
-						local g=Duel.SelectMatchingCard(tp,s.schfilter,tp,LOCATION_DECK,0,1,1,nil)
+						local g=Duel.SelectMatchingCard(tp,s.schfilter,tp,LOCATION_DECK+LOCATION_GRAVE,0,1,1,nil)
 						if #g>0 then
 							Duel.SendtoHand(g,nil,REASON_EFFECT)
 							Duel.ConfirmCards(1-tp,g)

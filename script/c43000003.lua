@@ -40,6 +40,9 @@ function s.initial_effect(c)
 	
 end
 
+s.listed_series={0x8}
+
+--effect 1
 function s.spcon(e,tp,eg,ep,ev,re,r,rp)
 	return Duel.IsExistingMatchingCard(aux.FilterFaceupFunction(Card.IsSetCard,0x8),tp,LOCATION_MZONE,0,1,nil)
 end
@@ -55,7 +58,7 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
 	Duel.SpecialSummon(c,0,tp,tp,false,false,POS_FACEUP)
 end
 
---second effect
+--effect 2
 function s.filter(c)
 	return c:IsSetCard(0x8) and c:IsType(TYPE_MONSTER) and c:IsFaceup()
 end
@@ -107,7 +110,7 @@ function s.spop2(e,tp,eg,ep,ev,re,r,rp)
 		local dc=Duel.GetOperatedGroup():GetFirst()
 		if dc:IsSetCard(0x8) and dc:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.SelectYesNo(tp,aux.Stringid(id,0)) then
 			Duel.BreakEffect()
-			Duel.SpecialSummonStep(dc,0,tp,tp,false,false,POS_FACEUP)		
+			Duel.SpecialSummonStep(dc,0,tp,tp,false,false,POS_FACEUP)	   
 			Duel.SpecialSummonComplete()
 		end
 	end
