@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 --Elemental HERO Nightmare Necroshade
 local s,id=GetID()
 function s.initial_effect(c)
@@ -29,6 +28,8 @@ function s.initial_effect(c)
 end
 
 s.listed_series={0x8}
+
+--effect 1
 function s.cfilter(c)
 	return c:IsType(TYPE_MONSTER) and c:IsSetCard(0x8) and c:IsDiscardable()
 end

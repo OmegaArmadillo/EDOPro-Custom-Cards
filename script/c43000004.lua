@@ -33,6 +33,8 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 
+s.listed_series={0x8}
+
 --effect 1
 function s.filter(c)
 	return c:IsSetCard(0x8) and c:IsAbleToHand()

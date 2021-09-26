@@ -35,7 +35,9 @@ function s.initial_effect(c)
 	c:RegisterEffect(e4)
 end
 
+s.listed_series={0x8,0x46,0xa5}
 
+--effect 1
 function s.filter(c)
 	return ((c:IsSetCard(0x8) and c:IsType(TYPE_MONSTER)) or c:IsCode(27847700,24094653,74335036,07614732,48130397,76647978)) and c:IsAbleToHand()
 end
@@ -56,7 +58,7 @@ end
 
 
 
-s.listed_series={0x8}
+--effect 2
 function s.spcfilter(c,tp)
 	return c:IsReason(REASON_BATTLE+REASON_EFFECT)
 		and c:IsPreviousControler(tp) and c:IsPreviousLocation(LOCATION_MZONE)

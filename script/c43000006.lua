@@ -10,9 +10,9 @@ function s.initial_effect(c)
 	e1:SetCode(EVENT_CHAINING)
 	e1:SetRange(LOCATION_HAND)
 	e1:SetProperty(EFFECT_FLAG_DAMAGE_STEP+EFFECT_FLAG_DAMAGE_CAL)
-	e1:SetCondition(s.condition2)
-	e1:SetTarget(s.target2)
-	e1:SetOperation(s.activate2)
+	e1:SetCondition(s.condition)
+	e1:SetTarget(s.target)
+	e1:SetOperation(s.activate)
 	c:RegisterEffect(e1)
 
 
@@ -38,17 +38,19 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 end
 
+s.listed_series={0x8}
 
-function s.condition2(e,tp,eg,ep,ev,re,r,rp)
+--effect 1
+function s.condition(e,tp,eg,ep,ev,re,r,rp)
 	return not e:GetHandler():IsStatus(STATUS_BATTLE_DESTROYED) and ep~=tp
 		and re:IsHasType(EFFECT_TYPE_ACTIVATE) and re:IsActiveType(TYPE_TRAP) and Duel.IsChainNegatable(ev)
 end
 
-function s.target2(e,tp,eg,ep,ev,re,r,rp,chk)
+function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0 and e:GetHandler():IsCanBeSpecialSummoned(e,0,tp,false,false) end
 	Duel.SetOperationInfo(0,CATEGORY_SPECIAL_SUMMON,e:GetHandler(),1,0,LOCATION_GRAVE)
 end
-function s.activate2(e,tp,eg,ep,ev,re,r,rp)
+function s.activate(e,tp,eg,ep,ev,re,r,rp)
 local c=e:GetHandler()
 	Duel.SpecialSummonStep(c,0,tp,tp,false,false,POS_FACEUP)	
  Duel.SpecialSummonComplete()
