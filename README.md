@@ -5,7 +5,7 @@ Card images and effects belong to their original owners.
 Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
 If you do not want your cards on this database you can message me to have them removed.
 
-Last Update 9/12/21
+Last Update 9/25/21
 
 Current Progress
 
@@ -20,7 +20,7 @@ Striking Sparkman - Need to finish atk gain effect</br>
 Nightmare Necroshade - Working</br> 
 Feral Wildheart - Working</br>
 Cutting Bladedge - Need to finish summoning condition and battle effect (need to banish after destroyed not as effect and include level restricion)</br> 
-Devoted Wroughtweiler - Not started</br>
+Devoted Wroughtweiler - Working</br>
 Skilled HERO Kid - Not started, need to find work around for naming</br>
 Winged KuriHERO - Not started</br>
 HERO Evolution - Started</br>
