@@ -67,7 +67,6 @@ end
 
 
 --effect 2
-s.listed_names={id}
 function s.spfilter2(c,e,tp)
 	return c:IsLevelBelow(6) and c:IsSetCard(0x8) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and not c:IsCode(id)
 end

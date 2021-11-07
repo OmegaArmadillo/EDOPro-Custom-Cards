@@ -41,21 +41,32 @@ function s.initial_effect(c)
 end
 
 
+s.listed_series={0x8}
 
-function s.mfilter(c)
-	return c:IsLevelAbove(1) and c:IsSetCard(0x8,fc,sumtype,tp) and not c:IsHasEffect(511002961)
-end
-function s.matcheck(g,lc,sumtype,tp)
-	return g:GetClassCount(Card.GetLevel)==1
-end
+--fusion materials
+
+--function s.mfilter(c)
+--  return c:IsLevelAbove(1) and c:IsSetCard(0x8,fc,sumtype,tp) and not c:IsHasEffect(511002961)
+--end
+--function s.matcheck(g,lc,sumtype,tp)
+--  return g:GetClassCount(Card.GetLevel)==1
+--end
+
+
+--function s.ffilter2(c,fc,sumtype,sp,sub,mg,sg)
+--	return c:IsSetCard(0x8,fc,sumtype,tp) and (not sg or sg:FilterCount(aux.TRUE,c)==0 or (sg:IsExists(Card.GetLevel,1,c,c:GetAttribute(),fc,sumtype,sp) and not sg:IsExists(Card.GetAttack,1,c,c:GetRace(),fc,sumtype,sp)))
+--end
 
 
 function s.ffilter(c,fc,sumtype,tp,sub,mg,sg)
 	return c:IsSetCard(0x8,fc,sumtype,tp) and c:GetAttribute(fc,sumtype,tp)~=0 and (not sg or not sg:IsExists(s.fusfilter,1,c,c:GetAttribute(fc,sumtype,tp),fc,sumtype,tp))
 end
 
+
+
+
 function s.fusfilter(c,attr,fc,sumtype,tp)
-	return c:IsAttribute(attr,fc,sumtype,tp) and not c:IsHasEffect(511002961)
+  return c:IsAttribute(attr,fc,sumtype,tp) and not c:IsHasEffect(511002961)
 end
 
 
@@ -83,9 +94,7 @@ function s.descost(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 
 
-s.listed_series={0x8}
 
---fusion materials
 function s.thcon(e,tp,eg,ep,ev,re,r,rp)
 	return e:GetHandler():GetFlagEffect(id)~=0
 end
