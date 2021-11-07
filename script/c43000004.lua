@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 --Elemental HERO Striking Sparkman
 local s,id=GetID()
 function s.initial_effect(c)
