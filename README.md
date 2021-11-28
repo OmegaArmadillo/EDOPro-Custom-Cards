@@ -5,7 +5,7 @@ Card images and effects belong to their original owners.
 Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
 If you do not want your cards on this database you can message me to have them removed.
 
-Last Update 9/25/21
+Last Update 11/6/21
 
 Current Progress
 
@@ -27,8 +27,8 @@ HERO Evolution - Started</br>
 Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
 HERO Fusion Resurgence - Need to figure a way to only allow fusions with listed materials</br>
-Naval Mariner - Not started</br>
-Thrashing Wildheart - Not started</br>
+Naval Mariner - Need to figure out proper fusion materials and set effect</br>
+Thrashing Wildheart - Need to figute out proper fusion materials and banish summon effect </br>
 Storming Thunder Giant - Need to figure out return to hand effect and proper fusion materials</br>
 Galactic Wizard - Not started</br>
 Illusionist Witch - Not started</br>
