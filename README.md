@@ -5,7 +5,7 @@ Card images and effects belong to their original owners.
 Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
 If you do not want your cards on this database you can message me to have them removed.
 
-Last Update 11/6/21
+Last Update 11/27/21
 
 Current Progress
 
@@ -26,12 +26,12 @@ Winged KuriHERO - Not started</br>
 HERO Evolution - Started</br>
 Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
-HERO Fusion Resurgence - Need to figure a way to only allow fusions with listed materials</br>
-Naval Mariner - Need to figure out proper fusion materials and set effect</br>
+HERO Fusion Resurgence - Working, now has elemental hero summon restriction</br>
+Naval Mariner - Need to figure out proper fusion materials and figure out listed cards for set effect</br>
 Thrashing Wildheart - Need to figute out proper fusion materials and banish summon effect </br>
 Storming Thunder Giant - Need to figure out return to hand effect and proper fusion materials</br>
 Galactic Wizard - Not started</br>
 Illusionist Witch - Not started</br>
 Demon Dynamo - Not started</br>
 Mystic HERO Ritual - Not started</br>
-Nebulonic Star - Need to make sure it cannot banish itself from the hand to special summon itself</br>
+Nebulonic Star - Working, Now can only use monsters to special summon</br>
