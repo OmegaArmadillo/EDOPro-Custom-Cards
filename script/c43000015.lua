@@ -2,7 +2,6 @@
 local s,id=GetID()
 function s.initial_effect(c)
 	--Fusion procedure
-	c:EnableReviveLimit()
 	Fusion.AddProcMixN(c,true,true,s.ffilter,2)
 
 	--battle protect
@@ -38,17 +37,12 @@ function s.initial_effect(c)
 
 	--set hero spell/trap from deck
 	local e4=Effect.CreateEffect(c)
-	e4:SetDescription(aux.Stringid(id,1))
-	e4:SetCategory(CATEGORY_SEARCH)
-	e4:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_O)
-	e4:SetProperty(EFFECT_FLAG_DELAY)
-	e4:SetCode(EVENT_CHAIN_SOLVED)
+	e4:SetType(EFFECT_TYPE_IGNITION)
 	e4:SetRange(LOCATION_MZONE)
-	e4:SetCountLimit(1,id)
-	e4:SetLabel(0)
-	e4:SetCondition(s.spcon)
-	e4:SetTarget(s.sptg)
-	e4:SetOperation(s.spop)
+	e4:SetCountLimit(1)
+	e4:SetCondition(s.setcon)
+	e4:SetTarget(s.settg)
+	e4:SetOperation(s.setop)
 	c:RegisterEffect(e4)
 end
 
@@ -107,11 +101,6 @@ end
 
 
 
-
-
-
-
-
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 	local c=e:GetHandler()
 	if chk==0 then return Duel.GetLocationCount(tp,LOCATION_MZONE)>0
@@ -147,5 +136,37 @@ function s.spop(e,tp,eg,ep,ev,re,r,rp)
 		e1:SetCondition(s.rmcon)
 		e1:SetOperation(s.rmop)
 		Duel.RegisterEffect(e1,tp)
+	end
+end
+
+
+--set effect
+function s.stfilter(c)
+	return c:IsType(TYPE_SPELL+TYPE_TRAP)
+end
+function s.setcon(e,tp,eg,ep,ev,re,r,rp)
+	return tp==Duel.GetTurnPlayer() and not Duel.IsExistingMatchingCard(s.stfilter,tp,LOCATION_SZONE,0,1,nil) 
+end
+
+function s.setfilter(c)
+	return (c:IsSetCard(0x3008) or c:IsSetCard(0x8)) and (c:IsType(TYPE_SPELL) or c:IsType(TYPE_TRAP)) and c:IsSSetable()
+end
+function s.settg(e,tp,eg,ep,ev,re,r,rp,chk)
+	if chk==0 then return Duel.IsExistingMatchingCard(s.setfilter,tp,LOCATION_DECK,0,1,nil) end
+end
+function s.setop(e,tp,eg,ep,ev,re,r,rp)
+	Duel.Hint(HINT_SELECTMSG,tp,HINTMSG_SET)
+	local g=Duel.SelectMatchingCard(tp,s.setfilter,tp,LOCATION_DECK,0,1,1,nil)
+	if #g>0 then
+		local c=e:GetHandler()
+		local tc=g:GetFirst()
+		local fid=c:GetFieldID()
+		Duel.SSet(tp,tc)
+		tc:RegisterFlagEffect(id,RESET_EVENT+RESETS_STANDARD,0,1,fid)
+		local e1=Effect.CreateEffect(e:GetHandler())
+		e1:SetType(EFFECT_TYPE_SINGLE)
+		e1:SetCode(EFFECT_CANNOT_TRIGGER)
+		e1:SetReset(RESET_PHASE+PHASE_END)
+		tc:RegisterEffect(e1)
 	end
 end

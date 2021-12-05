@@ -1,7 +1,7 @@
 --Elemental HERO Nova Wingman
 local s,id=GetID()
 function s.initial_effect(c)
-   
+   --Fusion Procedure
 	Fusion.AddProcMixN(c,true,true,s.ffilter,2) 
 
 	--gain atk
@@ -68,7 +68,7 @@ function s.fusfilter(c,attr,fc,sumtype,tp)
 	return c:IsAttribute(attr,fc,sumtype,tp) and not c:IsHasEffect(511002961)
 end
 
-s.material_setcode={0x8,0x3008}
+--s.material_setcode={0x8,0x3008}
 
 --attack boost
 function s.tgcon(e)

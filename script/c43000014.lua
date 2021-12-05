@@ -28,16 +28,15 @@ end
 function s.stage2(e,tc,tp,mg,chk)
 	if chk==2 then
 		if e:IsHasType(EFFECT_TYPE_ACTIVATE) then
-			local e1=Effect.CreateEffect(c)
-			e1:SetDescription(aux.Stringid(id,0))
-			e1:SetType(EFFECT_TYPE_FIELD)
-			e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET+EFFECT_FLAG_CLIENT_HINT)
-			e1:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
-			e1:SetDescription(aux.Stringid(id,0))
-			e1:SetTargetRange(1,0)
-			e1:SetTarget(s.splimit)
-			e1:SetReset(RESET_PHASE+PHASE_END)
-			Duel.RegisterEffect(e1,tp)
+			local e1=Effect.CreateEffect(e:GetHandler())
+				e1:SetDescription(aux.Stringid(id,0))
+				e1:SetType(EFFECT_TYPE_FIELD)
+				e1:SetCode(EFFECT_CANNOT_SPECIAL_SUMMON)
+				e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET+EFFECT_FLAG_CLIENT_HINT)
+				e1:SetTargetRange(1,0)
+				e1:SetTarget(function(_,c)return not c:IsSetCard(0x3008)end)
+				e1:SetReset(RESET_PHASE+PHASE_END+RESET_SELF_TURN,Duel.IsTurnPlayer(tp) and 2 or 1)
+	Duel.RegisterEffect(e1,tp)
 		end
 	end
 end
