@@ -39,7 +39,7 @@ function s.initial_effect(c)
 	local e4=Effect.CreateEffect(c)
 	e4:SetType(EFFECT_TYPE_IGNITION)
 	e4:SetRange(LOCATION_MZONE)
-	e4:SetCountLimit(1)
+	e4:SetCountLimit(1,id+1)
 	e4:SetCondition(s.setcon)
 	e4:SetTarget(s.settg)
 	e4:SetOperation(s.setop)
@@ -141,15 +141,17 @@ end
 
 
 --set effect
-function s.stfilter(c)
+function s.stchkfilter(c)
 	return c:IsType(TYPE_SPELL+TYPE_TRAP)
 end
 function s.setcon(e,tp,eg,ep,ev,re,r,rp)
-	return tp==Duel.GetTurnPlayer() and not Duel.IsExistingMatchingCard(s.stfilter,tp,LOCATION_SZONE,0,1,nil) 
+	return tp==Duel.GetTurnPlayer() and not Duel.IsExistingMatchingCard(s.stchkfilter,tp,LOCATION_SZONE,0,1,nil) 
 end
 
 function s.setfilter(c)
-	return (c:IsSetCard(0x3008) or c:IsSetCard(0x8)) and (c:IsType(TYPE_SPELL) or c:IsType(TYPE_TRAP)) and c:IsSSetable()
+	if not (c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()) then return false end
+	return not c:IsCode(id) and (aux.IsArchetypeListed(c,0x8) or aux.IsArchetypeListed(c,0x3008))
+
 end
 function s.settg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.setfilter,tp,LOCATION_DECK,0,1,nil) end

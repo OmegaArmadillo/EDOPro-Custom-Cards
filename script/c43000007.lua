@@ -31,10 +31,10 @@ s.listed_series={0x8}
 
 --effect 1
 function s.tbfilter(c,ft)
-	return c:IsFaceup() and c:IsSetCard(0x8)
+	return c:IsFaceup() and c:IsType(TYPE_MONSTER) and c:IsSetCard(0x8)
 end
 function s.rmfilter(c,e,tp)
-	return c:IsSetCard(0x8) and c:IsAbleToRemove()
+	return c:IsType(TYPE_MONSTER) and c:IsSetCard(0x8) and c:IsAbleToRemove()
 end
 function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk,chkc)
    local c=e:GetHandler()
@@ -83,7 +83,7 @@ function s.adamtg(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 function s.adamop(e,tp,eg,ep,ev,re,r,rp)
 	local tc=Duel.GetFirstTarget()
-	if tc and tc:IsRelateToEffect(e) then	 
+	if tc and tc:IsRelateToEffect(e) then	
 		  if Duel.Remove(tc,0,REASON_EFFECT) then
 				local p=Duel.GetChainInfo(0,CHAININFO_TARGET_PLAYER)
 				local dam=tc:GetDefense()

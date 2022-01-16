@@ -166,12 +166,12 @@ function s.cdestg(e,tp,eg,ep,ev,re,r,rp,chk)
 	end
 	local sel=e:GetLabel()
 	if sel==3 then
-		Duel.Hint(HINT_SELECTMSG,tp,aux.Stringid(id,0))
-		sel=Duel.SelectOption(tp,aux.Stringid(id,1),aux.Stringid(id,2))+1
+		--Duel.Hint(HINT_SELECTMSG,tp,aux.Stringid(id,0))
+		sel=Duel.SelectOption(tp,aux.Stringid(id,0),aux.Stringid(id,1))+1
 	elseif sel==1 then
-		Duel.SelectOption(tp,aux.Stringid(id,1))
+		Duel.SelectOption(tp,aux.Stringid(id,0))
 	else
-		Duel.SelectOption(tp,aux.Stringid(id,2))
+		Duel.SelectOption(tp,aux.Stringid(id,1))
 	end
 	e:SetLabel(sel)
 	if sel==1 then
