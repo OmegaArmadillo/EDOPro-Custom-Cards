@@ -110,7 +110,7 @@ function s.spop2(e,tp,eg,ep,ev,re,r,rp)
 		local dc=Duel.GetOperatedGroup():GetFirst()
 		if dc:IsSetCard(0x8) and dc:IsCanBeSpecialSummoned(e,0,tp,false,false) and Duel.SelectYesNo(tp,aux.Stringid(id,0)) then
 			Duel.BreakEffect()
-			Duel.SpecialSummonStep(dc,0,tp,tp,false,false,POS_FACEUP)	 
+			Duel.SpecialSummonStep(dc,0,tp,tp,false,false,POS_FACEUP)	
 			Duel.SpecialSummonComplete()
 		end
 	end

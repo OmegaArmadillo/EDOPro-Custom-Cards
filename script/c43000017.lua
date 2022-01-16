@@ -54,7 +54,7 @@ s.listed_series={0x8}
 
 
 --function s.ffilter2(c,fc,sumtype,sp,sub,mg,sg)
---	return c:IsSetCard(0x8,fc,sumtype,tp) and (not sg or sg:FilterCount(aux.TRUE,c)==0 or (sg:IsExists(Card.GetLevel,1,c,c:GetAttribute(),fc,sumtype,sp) and not sg:IsExists(Card.GetAttack,1,c,c:GetRace(),fc,sumtype,sp)))
+--  return c:IsSetCard(0x8,fc,sumtype,tp) and (not sg or sg:FilterCount(aux.TRUE,c)==0 or (sg:IsExists(Card.GetLevel,1,c,c:GetAttribute(),fc,sumtype,sp) and not sg:IsExists(Card.GetAttack,1,c,c:GetRace(),fc,sumtype,sp)))
 --end
 
 
@@ -180,12 +180,12 @@ function s.nop(e,tp,eg,ep,ev,re,r,rp)
 					local e2=Effect.CreateEffect(e:GetHandler())
 					e2:SetType(EFFECT_TYPE_SINGLE)
 					e2:SetCode(EFFECT_DISABLE)
-					e2:SetReset(RESET_EVENT+RESETS_STANDARD)
+					e2:SetReset(RESET_EVENT+RESETS_STANDARD_DISABLE+RESET_PHASE+PHASE_END)
 					tcn:RegisterEffect(e2)
 					local e3=Effect.CreateEffect(e:GetHandler())
 					e3:SetType(EFFECT_TYPE_SINGLE)
 					e3:SetCode(EFFECT_DISABLE_EFFECT)
-					e3:SetReset(RESET_EVENT+RESETS_STANDARD)
+					e3:SetReset(RESET_EVENT+RESETS_STANDARD_DISABLE+RESET_PHASE+PHASE_END)
 					tcn:RegisterEffect(e3)
 				end
 			end
