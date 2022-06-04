@@ -8,31 +8,34 @@ function s.initial_effect(c)
 	e1:SetProperty(EFFECT_FLAG_CARD_TARGET+EFFECT_FLAG_DAMAGE_STEP)
 	e1:SetType(EFFECT_TYPE_TRIGGER_O+EFFECT_TYPE_SINGLE)
 	e1:SetCode(EVENT_SUMMON_SUCCESS)
+	e1:SetCountLimit(1,id)
 	e1:SetTarget(s.tg)
 	e1:SetOperation(s.op)
 	c:RegisterEffect(e1)
 	local e2=e1:Clone()
 	e2:SetCode(EVENT_FLIP_SUMMON_SUCCESS)
+	e2:SetCountLimit(1,id)
 	c:RegisterEffect(e2)
 	local e3=e1:Clone()
 	e3:SetCode(EVENT_SPSUMMON_SUCCESS)
+	e3:SetCountLimit(1,id)
 	c:RegisterEffect(e3)
 
 
 
  --special summon
-	local e2=Effect.CreateEffect(c)
-	e2:SetDescription(aux.Stringid(id,0))
-	e2:SetCategory(CATEGORY_SPECIAL_SUMMON)
-	e2:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_O)
-	e2:SetCode(EVENT_DESTROYED)
-	e2:SetProperty(EFFECT_FLAG_DAMAGE_STEP+EFFECT_FLAG_DELAY)
-	e2:SetRange(LOCATION_GRAVE)
-	e2:SetCountLimit(1,id)
-	e2:SetCondition(s.spcon)
-	e2:SetTarget(s.sptg)
-	e2:SetOperation(s.spop)
-	c:RegisterEffect(e2)
+	local e4=Effect.CreateEffect(c)
+	e4:SetDescription(aux.Stringid(id,0))
+	e4:SetCategory(CATEGORY_SPECIAL_SUMMON)
+	e4:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_TRIGGER_O)
+	e4:SetCode(EVENT_DESTROYED)
+	e4:SetProperty(EFFECT_FLAG_DAMAGE_STEP+EFFECT_FLAG_DELAY)
+	e4:SetRange(LOCATION_GRAVE+LOCATION_HAND)
+	e4:SetCountLimit(1,{id,1})
+	e4:SetCondition(s.spcon)
+	e4:SetTarget(s.sptg)
+	e4:SetOperation(s.spop)
+	c:RegisterEffect(e4)
 end
 
 s.listed_series={0x8,0x46,0xa5}
@@ -74,15 +77,15 @@ function s.sptg(e,tp,eg,ep,ev,re,r,rp,chk)
 end
 function s.spop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
-	if c:IsRelateToEffect(e) then
-		Duel.SpecialSummon(c,0,tp,tp,false,false,POS_FACEUP)
-
+	if c:IsRelateToEffect(e) and Duel.SpecialSummon(c,0,tp,tp,false,false,POS_FACEUP)>0 then
+		--Banish it if it leaves the field
 		local e1=Effect.CreateEffect(c)
+		e1:SetDescription(aux.Stringid(id,0))
 		e1:SetType(EFFECT_TYPE_SINGLE)
 		e1:SetCode(EFFECT_LEAVE_FIELD_REDIRECT)
-		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE)
+		e1:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_CLIENT_HINT)
 		e1:SetReset(RESET_EVENT+RESETS_REDIRECT)
-		e1:SetValue(LOCATION_MZONE)
+		e1:SetValue(LOCATION_DECK)
 		c:RegisterEffect(e1,true)
 	end
 end

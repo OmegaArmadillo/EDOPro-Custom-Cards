@@ -12,26 +12,26 @@ Current Progress
 PrimeAceJohn</br> 
 https://www.deviantart.com/primeacejohn</br>
 
-Gusting Avian - Working</br>
-Blazing Burstinatrix - Working</br> 
+Gusting Avian - Working, fixed being able to target itself to summon</br>
+Blazing Burstinatrix - Working, first effect now works in hand and properly shuffles into deck</br> 
 Crashing Clayman - Working</br>
 Hydraulic Bubbleman - Working</br> 
 Striking Sparkman - Need to finish atk gain effect</br> 
 Nightmare Necroshade - Working</br> 
-Feral Wildheart - Working</br>
-Cutting Bladedge -  Working summoning effect?, need to figure out level restriciton on search, now only uses monsters to summon itself</br> 
+Feral Wildheart - Working, can now only be special summoned once per turn</br>
+Cutting Bladedge -  Working summoning effect?, need to figure out level restriciton on search</br> 
 Devoted Wroughtweiler - Working</br>
 Skilled HERO Kid - Working, need to find work around for naming</br>
 Winged KuriHERO - Working</br>
 HERO Evolution - Started</br>
-Nova Wingman - Working, fixed problem with using wrong selection text</br>
+Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
-HERO Fusion Resurgence - Working, Now has activate once per turn restrictions</br>
-Naval Mariner - Need to figure out proper fusion materials and figure out listed cards for set effect</br>
-Thrashing Wildheart - Cleanup and start summon effect</br>
+HERO Fusion Resurgence - Working/br>
+Naval Mariner - Need to figure out proper fusion materials, now set all correct spells and traps</br>
+Thrashing Wildheart - Need to figure out hero restriction for burn effect</br>
 Storming Thunder Giant - Negate effects now end during the end phase, Need to figure out return to hand effect and proper fusion materials</br>
-Galactic Wizard - Not started</br>
-Illusionist Witch - Not started</br>
+Galactic Wizard - Need to figure out fusion effect</br>
+Illusionist Witch - Need to figure out while on field part of negate effect</br>
 Demon Dynamo - Not started</br>
-Mystic HERO Ritual - Not started</br>
-Nebulonic Star - Working, Now can only use monsters to special summon</br>
+Mystic HERO Ritual - Working</br>
+Nebulonic Star - Working</br>
