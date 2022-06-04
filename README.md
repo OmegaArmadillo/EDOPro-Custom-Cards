@@ -23,7 +23,7 @@ Cutting Bladedge -  Working summoning effect?, need to figure out level restrici
 Devoted Wroughtweiler - Working</br>
 Skilled HERO Kid - Working, need to find work around for naming</br>
 Winged KuriHERO - Working</br>
-HERO Evolution - Started</br>
+HERO Evolution - Started, Not currently functional</br>
 Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
 HERO Fusion Resurgence - Working/br>
