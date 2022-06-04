@@ -30,7 +30,7 @@ HERO Fusion Resurgence - Working/br>
 Naval Mariner - Need to figure out proper fusion materials, now set all correct spells and traps</br>
 Thrashing Wildheart - Need to figure out hero restriction for burn effect</br>
 Storming Thunder Giant - Negate effects now end during the end phase, Need to figure out return to hand effect and proper fusion materials</br>
-Galactic Wizard - Need to figure out fusion effect</br>
+Galactic Wizard - Need to figure out fusion summon effect</br>
 Illusionist Witch - Need to figure out while on field part of negate effect</br>
 Demon Dynamo - Need to figure out normal summon restriction to controller only, Need to figure out summoned by its own effect.</br>
 Mystic HERO Ritual - Working</br>
