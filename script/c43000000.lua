@@ -68,7 +68,7 @@ end
 
 --effect 2
 function s.spfilter2(c,e,tp)
-	return c:IsLevelBelow(6) and c:IsSetCard(0x8) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and not c:IsCode(id)
+	return c:IsLevelBelow(6) and c:IsSetCard(0x8) and c:IsCanBeSpecialSummoned(e,0,tp,false,false) and not c:IsCode(21844576)
 end
 
 

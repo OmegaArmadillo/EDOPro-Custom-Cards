@@ -1,7 +1,8 @@
 --Elemental HERO Feral Wildheart
 local s,id=GetID()
 function s.initial_effect(c)
-	
+	--special summon limit
+	c:SetSPSummonOnce(id)
 
 	--Special summon when a trap is activated
 	local e1=Effect.CreateEffect(c)

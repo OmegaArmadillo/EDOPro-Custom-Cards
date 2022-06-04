@@ -149,9 +149,11 @@ function s.setcon(e,tp,eg,ep,ev,re,r,rp)
 end
 
 function s.setfilter(c)
-	if not (c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()) then return false end
-	return not c:IsCode(id) and (aux.IsArchetypeListed(c,0x8) or aux.IsArchetypeListed(c,0x3008))
+ 
+--   if not (c:IsType(TYPE_SPELL+TYPE_TRAP) and c:IsAbleToHand()) then return false end
+ --   return not c:IsCode(id) and (aux.IsArchetypeListed(c,0x8) or aux.IsArchetypeListed(c,0x3008))
 
+	return c:IsCode(00191749,00213326,08949584,16169772,27191436,35255456,37318031,40522482,45906428,54283059,55428811,63703130,67951831,75141056,76442616,78387742,80170678,52553471,61968753,85787173,89058026,47596607,63035430) or c:IsCode(10759529,19024706,22020907,36586443,37412656,43452193,44676200,74095602,81167171,99075257) and c:IsAbleToHand()
 end
 function s.settg(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.setfilter,tp,LOCATION_DECK,0,1,nil) end
