@@ -5,7 +5,7 @@ Card images and effects belong to their original owners.
 Not all effects may be working correctly and some may be missing, if you find an issue please report if possible.  
 If you do not want your cards on this database you can message me to have them removed.
 
-Last Update 1/15/22
+Last Update 6/4/22
 
 Current Progress
 
@@ -32,6 +32,6 @@ Thrashing Wildheart - Need to figure out hero restriction for burn effect</br>
 Storming Thunder Giant - Negate effects now end during the end phase, Need to figure out return to hand effect and proper fusion materials</br>
 Galactic Wizard - Need to figure out fusion effect</br>
 Illusionist Witch - Need to figure out while on field part of negate effect</br>
-Demon Dynamo - Not started</br>
+Demon Dynamo - Need to figure out normal summon restriction to controller only, Need to figure out summoned by its own effect.</br>
 Mystic HERO Ritual - Working</br>
 Nebulonic Star - Working</br>
