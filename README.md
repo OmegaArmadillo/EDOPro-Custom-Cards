@@ -26,7 +26,7 @@ Winged KuriHERO - Working</br>
 HERO Evolution - Started, Not currently functional</br>
 Nova Wingman - Working</br>
 Supernova Wingman - Working</br>
-HERO Fusion Resurgence - Working/br>
+HERO Fusion Resurgence - Working</br>
 Naval Mariner - Need to figure out proper fusion materials, now set all correct spells and traps</br>
 Thrashing Wildheart - Need to figure out hero restriction for burn effect</br>
 Storming Thunder Giant - Negate effects now end during the end phase, Need to figure out return to hand effect and proper fusion materials</br>
